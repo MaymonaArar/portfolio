@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #cb3931;
+  --background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--background-color) 50%, var(--primary-color) 50%);
+}
+
+
+
+/* ... (existing styles) ... */
+
+.portfolio-container {
+  /* ... (existing styles) ... */
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-photo {
+  /* ... (existing styles) ... */
+  width: 300px;
+  height: 350px;
+  background-color: #ddd;
+  margin: 20px auto 20px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  margin-top: -33px;
+}
+
+.portfolio-about {
+  /* ... (existing styles) ... */
+  color: var(--primary-color);
+  flex-basis: 50%;
+  text-align: left;
+  font-size: small;
+}
+
+
+/* New styles for the new container */
+.portfolio-connect {
+  flex-basis: 100%;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: -130px;
+  position: relative;
+  height: 350px;
+  z-index: 0;
+}
+
+
+.portfolio-connect h1 {
+  color: black;
+  margin-bottom: 150px;
+  font-size: 40px;
+}
+
+.portfolio-connect .contact-info {
+  font-size: small;
+  margin-top: 10px;
+  position: absolute; 
+  bottom: 100; 
+  left: 10; 
+}
+
+.portfolio-connect .contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.portfolio-connect .social-icons {
+  margin-top: 10px;
+}
+
+.portfolio-connect .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/* Flexbox styles to position experience and education side by side */
+.portfolio-experience-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.portfolio-experience,
+.portfolio-education {
+  /* ... (existing styles) ... */
+  flex-basis: calc(50% - 10px);
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.portfolio-experience h3,
+.portfolio-education h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.portfolio-experience p,
+.portfolio-education p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .portfolio-experience,
+  .portfolio-education {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-experience {
+    margin-right: 20px;
+  }
+}
